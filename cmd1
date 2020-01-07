@@ -1,0 +1,9 @@
+pip install nameko
+
+docker run -p 5672:5672 --hostname nameko-rabbitmq rabbitmq:3
+
+nameko run hello
+
+nameko shell
+
+n.rpc.greetingservice.hello(name='world')
